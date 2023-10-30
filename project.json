@@ -1,5 +1,5 @@
 {
-    "name": "Project Template - Hello World",
+    "name": "Conceptnest",
     "components": [
         {
             "name": "/App",
@@ -39,6 +39,9 @@
                             }
                         ]
                     }
+                ],
+                "visualRoots": [
+                    "246f9453-a119-ac78-171e-3806cf596ecc"
                 ]
             },
             "metadata": {
@@ -56,7 +59,68 @@
             "name": "/Start Page",
             "id": "69559017-a17f-333b-c101-fbb0d1b4ce31",
             "graph": {
-                "connections": [],
+                "connections": [
+                    {
+                        "fromId": "7043efdb-7117-055f-995a-d08464333dc6",
+                        "fromProperty": "onClick",
+                        "toId": "d02460a4-7977-f8d5-9327-03933cc775ad",
+                        "toProperty": "open"
+                    },
+                    {
+                        "fromId": "d02460a4-7977-f8d5-9327-03933cc775ad",
+                        "fromProperty": "file",
+                        "toId": "d6cbeefb-3068-a0d2-b8de-c56382a48ddc",
+                        "toProperty": "in-File"
+                    },
+                    {
+                        "fromId": "d02460a4-7977-f8d5-9327-03933cc775ad",
+                        "fromProperty": "success",
+                        "toId": "d6cbeefb-3068-a0d2-b8de-c56382a48ddc",
+                        "toProperty": "run"
+                    },
+                    {
+                        "fromId": "d6cbeefb-3068-a0d2-b8de-c56382a48ddc",
+                        "fromProperty": "out-Text",
+                        "toId": "5e1b9ad5-5e65-85f7-e8f0-ea712964ba75",
+                        "toProperty": "value"
+                    },
+                    {
+                        "fromId": "c9cc98a1-00c5-97f8-1d04-8cf8cf6672af",
+                        "fromProperty": "mount",
+                        "toId": "aae113f0-098d-558a-3b32-f1bdc23a2f2d",
+                        "toProperty": "mounted"
+                    },
+                    {
+                        "fromId": "d02460a4-7977-f8d5-9327-03933cc775ad",
+                        "fromProperty": "success",
+                        "toId": "e764ce0b-79a2-8a35-9ee5-3c77f2da1b01",
+                        "toProperty": "start"
+                    },
+                    {
+                        "fromId": "e764ce0b-79a2-8a35-9ee5-3c77f2da1b01",
+                        "fromProperty": "timerFinished",
+                        "toId": "c9cc98a1-00c5-97f8-1d04-8cf8cf6672af",
+                        "toProperty": "to-mounted"
+                    },
+                    {
+                        "fromId": "13aebcc5-f5d2-ab6b-748e-269250e0cd5a",
+                        "fromProperty": "out-AccordionString",
+                        "toId": "50777b46-56e2-476a-634c-351781e7ad3f",
+                        "toProperty": "html"
+                    },
+                    {
+                        "fromId": "a3def6d1-66a9-6b08-b403-3e1067fb21dd",
+                        "fromProperty": "formatted",
+                        "toId": "13aebcc5-f5d2-ab6b-748e-269250e0cd5a",
+                        "toProperty": "in-InputString"
+                    },
+                    {
+                        "fromId": "13aebcc5-f5d2-ab6b-748e-269250e0cd5a",
+                        "fromProperty": "out-Success",
+                        "toId": "e764ce0b-79a2-8a35-9ee5-3c77f2da1b01",
+                        "toProperty": "start"
+                    }
+                ],
                 "roots": [
                     {
                         "id": "a4b7e4d4-c01d-1267-30b6-c2b448b90067",
@@ -87,14 +151,148 @@
                         ],
                         "children": [
                             {
-                                "id": "fcfbc04f-65ce-bf80-9c09-6cdca911f3fe",
-                                "type": "Text",
+                                "id": "dc7725dc-88e6-4b1b-c006-2b0e8ad897a2",
+                                "type": "Group",
                                 "parameters": {
+                                    "flexDirection": "row",
+                                    "sizeMode": "contentSize",
                                     "alignX": "center",
-                                    "alignY": "center",
-                                    "textAlignX": "center",
-                                    "textStyle": "Display",
-                                    "text": "Hello World!"
+                                    "columnGap": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "marginTop": {
+                                        "value": 0,
+                                        "unit": "px"
+                                    },
+                                    "flexWrap": "wrap",
+                                    "paddingLeft": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "marginRight": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "paddingTop": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "rowGap": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "7043efdb-7117-055f-995a-d08464333dc6",
+                                        "type": "net.noodl.controls.button",
+                                        "parameters": {
+                                            "cssClassName": "",
+                                            "label": "File picker",
+                                            "backgroundColor": "Grey - 900"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "eda4988a-4c06-9b2a-ad13-8a8bbe720b7a",
+                                        "type": "net.noodl.controls.button",
+                                        "parameters": {
+                                            "cssClassName": "view-l2",
+                                            "label": "Level 2"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "e9b2cdb8-8d0a-c257-3589-11a6a3d9f847",
+                                        "type": "net.noodl.controls.button",
+                                        "parameters": {
+                                            "cssClassName": "view-l3",
+                                            "label": "Level 3"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "6436f170-4a3f-fdfc-3454-74a43deb6f91",
+                                        "type": "net.noodl.controls.button",
+                                        "parameters": {
+                                            "cssClassName": "view-l4",
+                                            "label": "Level 4"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "600c1487-d86d-ee2c-afdd-ed7ae9d1d26f",
+                                "type": "Group",
+                                "parameters": {
+                                    "paddingLeft": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "paddingTop": {
+                                        "value": 40,
+                                        "unit": "px"
+                                    },
+                                    "paddingRight": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "paddingBottom": {
+                                        "value": 20,
+                                        "unit": "px"
+                                    },
+                                    "alignX": "center"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "65e478c8-92cd-b5d4-aed8-82594fc93117",
+                                        "type": "Group",
+                                        "parameters": {
+                                            "sizeMode": "contentHeight",
+                                            "alignX": "center",
+                                            "alignY": "top",
+                                            "width": {
+                                                "value": 80,
+                                                "unit": "%"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "50777b46-56e2-476a-634c-351781e7ad3f",
+                                                "type": "module.inlineHtml",
+                                                "parameters": {
+                                                    "runJs": false
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "aae113f0-098d-558a-3b32-f1bdc23a2f2d",
+                                "type": "module.inlineHtml",
+                                "parameters": {
+                                    "html": "<script>\r\n// Define the function\r\nfunction toggleNextLevel() {\r\n    // Get all the elements with class name that starts with 'level'\r\n    const elements = document.querySelectorAll('[class^=\"level\"]');\r\n\r\n    // Add click event listener to each element\r\n    elements.forEach(element => {\r\n        element.addEventListener('click', function() {\r\n            // Extract the level number from the class name\r\n            const level = Array.from(this.classList).find(cls => cls.startsWith('level'));\r\n            const levelNumber = parseInt(level.replace('level', ''));\r\n\r\n            // Find the parent accordion element\r\n            const accordionElement = this.closest('.accordion');\r\n\r\n            // If accordion element exists, find the next level elements within it\r\n            if (accordionElement) {\r\n                let nextElement = this.nextElementSibling;\r\n                while (nextElement && !nextElement.classList.contains(`level${levelNumber}`)) {\r\n                    const nextElementLevel = Array.from(nextElement.classList).find(cls => cls.startsWith('level'));\r\n                    const nextElementLevelNumber = parseInt(nextElementLevel.replace('level', ''));\r\n                    if (nextElementLevelNumber === levelNumber + 1) {\r\n                        const display = getComputedStyle(nextElement).display;\r\n                        nextElement.style.display = display === 'none' ? 'block' : 'none';\r\n                    } else if (nextElementLevelNumber > levelNumber + 1) {\r\n                        nextElement.style.display = 'none';\r\n                    }\r\n                    nextElement = nextElement.nextElementSibling;\r\n                }\r\n            }\r\n        });\r\n    });\r\n}\r\n\r\n// Call the function\r\ntoggleNextLevel();\r\n\r\nfunction toggleLevel2() {\r\n    // Get all the elements with class name 'level2'\r\n    const level2Elements = document.querySelectorAll('.level2');\r\n\r\n    // Toggle the display of each level2 element\r\n    level2Elements.forEach(element => {\r\n        const display = getComputedStyle(element).display;\r\n        element.style.display = display === 'none' ? 'block' : 'none';\r\n    });\r\n}\r\n\r\nfunction toggleLevel3() {\r\n    // Get all the elements with class name 'level2'\r\n    const level3Elements = document.querySelectorAll('.level3');\r\n\r\n    // Toggle the display of each level2 element\r\n    level3Elements.forEach(element => {\r\n        const display = getComputedStyle(element).display;\r\n        element.style.display = display === 'none' ? 'block' : 'none';\r\n    });\r\n}\r\n\r\nfunction toggleLevel4() {\r\n    // Get all the elements with class name 'level2'\r\n    const level4Elements = document.querySelectorAll('.level4');\r\n\r\n    // Toggle the display of each level2 element\r\n    level4Elements.forEach(element => {\r\n        const display = getComputedStyle(element).display;\r\n        element.style.display = display === 'none' ? 'block' : 'none';\r\n    });\r\n}\r\n\r\n// Add click event listener to all elements with class 'view-l2'\r\nconst l2Elements = document.querySelectorAll('.view-l2');\r\nl2Elements.forEach(element => {\r\n    element.addEventListener('click', toggleLevel2);\r\n});\r\n\r\nconst l3Elements = document.querySelectorAll('.view-l3');\r\nl3Elements.forEach(element => {\r\n    element.addEventListener('click', toggleLevel3);\r\n});\r\n\r\nconst l4Elements = document.querySelectorAll('.view-l4');\r\nl4Elements.forEach(element => {\r\n    element.addEventListener('click', toggleLevel4);\r\n});\r\n</script>",
+                                    "runJs": true
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -111,19 +309,825 @@
                         "ports": [],
                         "dynamicports": [],
                         "children": []
+                    },
+                    {
+                        "id": "a3def6d1-66a9-6b08-b403-3e1067fb21dd",
+                        "type": "String Format",
+                        "x": 558.5653274689319,
+                        "y": 256.3525980165424,
+                        "parameters": {
+                            "format": "<level1>1a</level1>\n<level2>2-1</level2>\n<level3>3-1</level3>\n<level4>4</level4>\n<level5>5</level5>\n<level2>2-2</level2>\n<level3>3-2</level3>\n<level4>4</level4>\n<level1>1b</level1>\n<level2>2b</level2>"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "26152f29-dfed-de66-2758-69e459f224a8",
+                        "type": "JavaScriptFunction",
+                        "label": "Convert String to Nested Accordions",
+                        "x": 719.2175968599945,
+                        "y": 319.22612827745405,
+                        "parameters": {
+                            "functionScript": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Initialize a variable to keep track of the next level\n    let nextLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // Get the next level\n        let nextMatch = regex.exec(input);\n        if (nextMatch !== null) {\n            nextLevel = parseInt(nextMatch[1]);\n        }\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            // Add a \"click\" class to the level1 div if it's the parent of this level\n            if (currentLevel === 1) {\n                result = result.replace(/<div class=\"level1\">/, '<div class=\"level1 click\">');\n            }\n            // Add a \"click\" class to all levels but the last one of a series\n            if (level < nextLevel) {\n                result += `<div class=\"level${level} click\">${content}</div>`;\n            } else {\n                result += `<div class=\"level${level}\">${content}</div>`;\n            }\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "in-InputString",
+                                "displayName": "InputString",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "out-AccordionString",
+                                "displayName": "AccordionString",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 6
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "prompt": {
+                                "history": [
+                                    {
+                                        "content": "convert a string into a series of nested text accordions. Every content inside a tag is a separate text: if the tag is \"level1\" create a seperate text accordion, if the tag if greater than \"level1\" create a nested text accordion inside the previous level. For example the string <level1>ciao<level1><level2>mai<level2><level1>boh<level1> will become: <div class=\"accordion\"><div class=\"level1\">ciao</div><div class=\"level2\">mai</div></div><div class=\"accordion\"><div class=\"level1\">boh</div></div>",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = match[1];\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === '1') {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            result += '<div class=\"accordion\">';\n        }\n\n        // Add the content to the accordion\n        result += `<div class=\"level${level}\">${content}</div>`;\n\n        // If the level is 1, close the accordion\n        if (level === '1') {\n            result += '</div>';\n        }\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7af5e50b-0qyhhy",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into a series of nested text accordions based on the level tags in the string. It takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> and parses it to identify the level tags and their content. \n\nIf the level of the tag is 1, it starts a new accordion. If the level is greater than 1, it adds the content as a nested accordion inside the previous level. \n\nThe function then outputs the resulting string as <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> and signals success with the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b7af6527f-fzbuin",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "the level tag is an integer number that could be any number",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is greater than the current level, start a new accordion\n        if (level > currentLevel) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            result += '<div class=\"accordion\">';\n        }\n\n        // Add the content to the accordion\n        result += `<div class=\"level${level}\">${content}</div>`;\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7afa316b-wma9uh",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions based on the level tags in the string. \n\nIt takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span>, where n is an integer representing the level of the content.\n\nThe function uses a regular expression to match the level tags and their content, and iterates over the matches. If the level of a match is greater than the current level, it starts a new accordion. If the level is less than or equal to the current level, it closes the current accordion and starts a new one at the same level. The content of each match is added to the current accordion.\n\nThe function outputs the resulting string of nested accordions as <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> and triggers the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b7afa9fa3-l4szvo",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "if the tag is \"level1\" create a seperate accordion, if the tag if greater than \"level1\" (any number) create a nested text accordion inside the previous level",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            result += '<div class=\"accordion\">';\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7afccfa5-jrx4fm",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions based on the level tags in the string. \n\nIt takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> as input, which should be a string containing level tags (e.g., <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span>.\n",
+                                        "snowflakeId": "018b7afd3bf7-0yth8f",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "include alse the level1 class with its content",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Include the level1 class with its content\n            result += `<div class=\"accordion level1\">${content}`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7afe6be8-nmotim",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions. It takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> as input, which is a string with tags indicating the level of the accordion. \n\nThe function uses a regular expression to match the tags and their content. It then iterates over the matches, and depending on the level of the match, it either starts a new accordion, creates a nested accordion inside the previous level, or closes the accordion. \n\nIf the level is 1, it starts a new accordion and includes the \"level1\" class in the div. If the level is greater than 1, it creates a nested accordion inside the previous level. If the level is less than or equal to the current level, it closes the accordion. \n\nThe result is a string that represents nested accordions, which is set as the <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span>. \n\nFinally, it triggers the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal to indicate that the operation was successful.\n",
+                                        "snowflakeId": "018b7afed82e-rf5w0y",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "separate the accordion class from the level1 class",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7affffb8-y6s2xf",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions by wrapping each level in a div with a corresponding class. \n\nIt takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span>`, where `n` is the level of the accordion and `content` is the content of the accordion.\n\nThe function uses a regular expression to match the tags and their content, and iterates over the matches. For each match, it checks the level and creates a new accordion if the level is 1, or a nested accordion if the level is greater than 1. If the level is less than or equal to the current level, it closes the accordion.\n\nFinally, it outputs the resulting string as <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> and triggers the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b7b007afa-qwx351",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "every level class greater than 1 is inside the same accordion class of the level1",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div></div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div></div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7b2fc06e-rsz2sb",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts an input string into a nested accordion structure. \n\nThe function takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span>`, where `n` is the level of the accordion and `content` is the content of the accordion. \n\nThe function uses a regular expression to match these tags and their content, and iterates over the matches. If the level is 1, it starts a new accordion. If the level is greater than 1, it creates a nested accordion inside the previous level. If the level is less than or equal to the current level, it closes the accordion. \n\nThe function outputs the resulting accordion structure as a string in the <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> output. \n\nFinally, it triggers the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal to indicate that the function has finished executing successfully.\n",
+                                        "snowflakeId": "018b7b306878-ock0g3",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "every level class greater than 1 (example: level2, level3) is inside the same accordion class of the level1",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div></div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div></div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7b32acba-k1h7pm",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions based on the level tags in the string. \n\nIt takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> as input, which is a string containing level tags (e.g., <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b7b3341b2-kbx2b5",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "every level class greater than 1 (example: level2, level3) is inside the same accordion class of the level1, like this:\naccordion class\n   -level1 class\n   -level2 class\naccordion class\n   -level1 class",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div></div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div></div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7b347709-xzsajc",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function takes an input string with nested \"level\" tags and converts it into a string with nested \"accordion\" and \"level\" divs. The level of nesting is determined by the number in the \"level\" tag. For example, a \"level1\" tag starts a new accordion, while a \"level2\" tag creates a nested div inside the previous level. The resulting string can be used to create a nested accordion structure in HTML.\n\nThe function takes <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> as an input, which is the string with nested \"level\" tags. It then uses a regular expression to match the tags and their content, and iterates over the matches to create the nested \"accordion\" and \"level\" divs. The function outputs the resulting string as <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span> and signals success with <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span>.\n",
+                                        "snowflakeId": "018b7b350191-zu694y",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "every level class greater than 1 must be inside the same accordion class of the level1, like this:\naccordion class\n-level1 class\n-level2 class\n-level3 class\naccordion class\n-level1 class\n-level2 class",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div></div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '</div>';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div></div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b7b381948-4w5rux",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string with nested \"level\" tags into a string of nested \"accordion\" divs. The input string is taken from the <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span> and a regular expression is used to match the tags and their content. \n\nEach \"level\" tag is converted into a div with a class corresponding to its level. If the level is 1, a new \"accordion\" div is started. If the level is greater than 1, a nested div is created inside the current \"accordion\" div. If the level is less than or equal to the current level, the current \"accordion\" div is closed. \n\nThe result is a string of nested \"accordion\" divs that can be used to create a nested accordion structure in HTML. This result is then set as the <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span>. \n\nFinally, the function signals success by triggering the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b7b38b8f4-4j4btl",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "add a \"click\" class after the level one if there is a greater level after",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            // Add a \"click\" class to the level1 div if it's the parent of this level\n            if (currentLevel === 1) {\n                result = result.replace(/<div class=\"level1\">/, '<div class=\"level1 click\">');\n            }\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b81579826-2yxrg9",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts an input string into a nested accordion structure using HTML div elements. \n\nThe function takes an <span style=\"color: var(--base-color-yellow-400);\">Inputs.InputString</span>, where n is the level of the accordion and content is the text to be displayed.\n\nThe function uses a regular expression to match these tags and their content, and iterates over the matches to build the accordion structure. \n\nIf the level is 1, a new accordion is started. If the level is greater than 1, a nested accordion is created inside the previous level. If the level is less than or equal to the current level, the accordion is closed. \n\nA \"click\" class is added to the level1 div if it's the parent of a level greater than 1. \n\nThe resulting accordion structure is output as <span style=\"color: var(--base-color-yellow-400);\">Outputs.AccordionString</span>. \n\nFinally, the function signals success by triggering the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> output signal.\n",
+                                        "snowflakeId": "018b815893e5-dabsfw",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "add the click class to all levels but the last one of a series",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Initialize a variable to keep track of the next level\n    let nextLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // Get the next level\n        let nextMatch = regex.exec(input);\n        if (nextMatch !== null) {\n            nextLevel = parseInt(nextMatch[1]);\n        }\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            // Add a \"click\" class to the level1 div if it's the parent of this level\n            if (currentLevel === 1) {\n                result = result.replace(/<div class=\"level1\">/, '<div class=\"level1 click\">');\n            }\n            // Add a \"click\" class to all levels but the last one of a series\n            if (level < nextLevel) {\n                result += `<div class=\"level${level} click\">${content}</div>`;\n            } else {\n                result += `<div class=\"level${level}\">${content}</div>`;\n            }\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b8159e1bf-192lh7",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a",
+                                        "snowflakeId": "018b815b0247-tctts4",
+                                        "metadata": {}
+                                    },
+                                    {
+                                        "content": "add the click class to all levels but the last one of a series",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Initialize a variable to keep track of the next level\n    let nextLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // Get the next level\n        let nextMatch = regex.exec(input);\n        if (nextMatch !== null) {\n            nextLevel = parseInt(nextMatch[1]);\n        }\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            // Add a \"click\" class to the level1 div if it's the parent of this level\n            if (currentLevel === 1) {\n                result = result.replace(/<div class=\"level1\">/, '<div class=\"level1 click\">');\n            }\n            // Add a \"click\" class to all levels but the last one of a series\n            if (level < nextLevel) {\n                result += `<div class=\"level${level} click\">${content}</div>`;\n            } else {\n                result += `<div class=\"level${level}\">${content}</div>`;\n            }\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                                        },
+                                        "snowflakeId": "018b815db50f-33y1tf",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function converts a string into nested accordions",
+                                        "snowflakeId": "018b815ef3cb-9y6jxi",
+                                        "metadata": {}
+                                    }
+                                ],
+                                "metadata": {
+                                    "templateId": "function"
+                                }
+                            },
+                            "AiAssistant": "old",
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "e0c5945b-03bc-cbe5-fc43-fc32bd85e1a7",
+                        "type": "CSS Definition",
+                        "x": -124.81369916932738,
+                        "y": 271.80563475510917,
+                        "parameters": {
+                            "style": ".level2,.level3,.level4,.level5 {\r\n    display: none;\r\n}\r\n\r\n.accordion:first-child {\r\n    padding-top: 0px;\r\n}\r\n\r\n.accordion {\r\n    padding-top:20px;\r\n}\r\n\r\n.level1 {\r\n    cursor: pointer;\r\n    padding: 10px 0px;\r\n    box-shadow: \r\n    -9px 0px 0px 0px white,  \r\n    -10px 0px 0px 0px black;\r\n}\r\n\r\n.level2 {\r\n    cursor: pointer;\r\n    padding: 10px 0px;\r\n    margin-left: 9.5px;\r\n    box-shadow: \r\n    -9px 0px 0px 0px white,  \r\n    -10px 0px 0px 0px black,\r\n    -18.8px 0px 0px 0px white,  \r\n    -20px 0px 0px 0px black;\r\n}\r\n\r\n.level3 {\r\n    cursor: pointer;\r\n    padding: 10px 0px;\r\n    margin-left: 19px;\r\n    box-shadow: \r\n    -9px 0px 0px 0px white,  \r\n    -10px 0px 0px 0px black,\r\n    -18.8px 0px 0px 0px white,  \r\n    -20px 0px 0px 0px black,\r\n    -28.3px 0px 0px 0px white,  \r\n    -29.5px 0px 0px 0px black;\r\n}\r\n\r\n.level4 {\r\n    cursor: pointer;\r\n    padding: 10px 0px;\r\n    margin-left: 28.5px;\r\n    box-shadow: \r\n    -9px 0px 0px 0px white,  \r\n    -10px 0px 0px 0px black,\r\n    -18.8px 0px 0px 0px white,  \r\n    -20px 0px 0px 0px black,\r\n    -28.3px 0px 0px 0px white,  \r\n    -29.5px 0px 0px 0px black,\r\n    -37.6px 0px 0px 0px white,  \r\n    -38.8px 0px 0px 0px black;\r\n}\r\n\r\n.level5 {\r\n    cursor: pointer;\r\n    padding: 10px 0px;\r\n    margin-left: 38px;\r\n    box-shadow: \r\n    -9px 0px 0px 0px white,  \r\n    -10px 0px 0px 0px black,\r\n    -18.8px 0px 0px 0px white,  \r\n    -20px 0px 0px 0px black,\r\n    -28.3px 0px 0px 0px white,  \r\n    -29.5px 0px 0px 0px black,\r\n    -37.6px 0px 0px 0px white,  \r\n    -38.8px 0px 0px 0px black,\r\n    -47.6px 0px 0px 0px white,  \r\n    -48.8px 0px 0px 0px black;\r\n}"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "style"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "4a23852c-236a-fb77-9e2b-0bd03a132054",
+                        "type": "Javascript2",
+                        "x": 514.5224958293991,
+                        "y": 473.4903000261532,
+                        "parameters": {
+                            "code": "// Define the function\r\nfunction toggleNextLevel() {\r\n    // Get all the elements with class name that starts with 'level'\r\n    const elements = document.querySelectorAll('[class^=\"level\"]');\r\n\r\n    // Add click event listener to each element\r\n    elements.forEach(element => {\r\n        element.addEventListener('click', function() {\r\n            // Extract the level number from the class name\r\n            const level = parseInt(this.className.replace('level', ''));\r\n\r\n            // Find the parent accordion element\r\n            const accordionElement = this.closest('.accordion');\r\n\r\n            // If accordion element exists, find the next level element within it\r\n            if (accordionElement) {\r\n                const nextLevelElement = accordionElement.querySelector(`.level${level + 1}`);\r\n\r\n                // If next level element exists, toggle its display\r\n                if (nextLevelElement) {\r\n                    const display = getComputedStyle(nextLevelElement).display;\r\n                    nextLevelElement.style.display = display === 'none' ? 'block' : 'none';\r\n                }\r\n            }\r\n        });\r\n    });\r\n}\r\n\r\n// Call the function\r\ntoggleNextLevel();\r\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "code"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "c34e84c6-f374-f4aa-2034-53a1864f08ad",
+                        "type": "JavaScriptFunction",
+                        "label": "Toggle Display of HTML Elements",
+                        "x": -288.0853030719966,
+                        "y": 331.29189335578087,
+                        "parameters": {
+                            "functionScript": "// Get all elements with class starting with \"level\"\nconst elements = document.querySelectorAll('[class^=\"level\"]');\n\n// Add click event listener to each element\nelements.forEach(element => {\n  element.addEventListener('click', function() {\n    // Get the level number of the clicked element\n    const level = parseInt(this.className.replace('level', ''));\n\n    // Get all elements with class starting with \"level\" inside the same accordion\n    const accordion = this.closest('.accordion');\n    const accordionElements = accordion.querySelectorAll('[class^=\"level\"]');\n\n    // Toggle the display of the greater level class\n    accordionElements.forEach(accordionElement => {\n      const accordionLevel = parseInt(accordionElement.className.replace('level', ''));\n      if (accordionLevel > level) {\n        accordionElement.style.display = accordionElement.style.display === 'none' ? 'block' : 'none';\n      }\n    });\n  });\n});\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [],
+                        "metadata": {
+                            "prompt": {
+                                "history": [
+                                    {
+                                        "content": "look at a html code made of accordions. If i click the div class \"levelX\" (where X is a number) the function toggle the display of the greater level class (example: if click class \"level1\" display class \"level2\")  \n\nexample: if click class \"level1\" toggle the class \"level2\" inside the same accordion class  \n\nexample: if click class \"level1\" to hide the \"level2\" but the \"level3\" or something greater is visibile, hide all levels  \n\nexample of html structure: accordion class -level1 class -level2 class -level3 class accordion class -level1 class -level2 class",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get all elements with class starting with \"level\"\nconst elements = document.querySelectorAll('[class^=\"level\"]');\n\n// Add click event listener to each element\nelements.forEach(element => {\n  element.addEventListener('click', function() {\n    // Get the level number of the clicked element\n    const level = parseInt(this.className.replace('level', ''));\n\n    // Get all elements with class starting with \"level\" inside the same accordion\n    const accordion = this.closest('.accordion');\n    const accordionElements = accordion.querySelectorAll('[class^=\"level\"]');\n\n    // Toggle the display of the greater level class\n    accordionElements.forEach(accordionElement => {\n      const accordionLevel = parseInt(accordionElement.className.replace('level', ''));\n      if (accordionLevel > level) {\n        accordionElement.style.display = accordionElement.style.display === 'none' ? 'block' : 'none';\n      }\n    });\n  });\n});\n"
+                                        },
+                                        "snowflakeId": "018b7b439d77-utyail",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function adds a click event listener to each HTML element with a class name starting with \"level\". When an element is clicked, it extracts the level number from the class name of the clicked element. \n\nIt then finds all elements within the same accordion that have a class name starting with \"level\". For each of these elements, it compares their level number with the level number of the clicked element. If the level number is greater, it toggles the display property of the element, effectively showing or hiding it.\n\nThis function is useful for creating interactive accordion-style interfaces where clicking on a section reveals or hides sub-sections.\n",
+                                        "snowflakeId": "018b7b43e9b9-r40a0r",
+                                        "metadata": {}
+                                    }
+                                ],
+                                "metadata": {
+                                    "templateId": "function"
+                                }
+                            },
+                            "AiAssistant": "old",
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "62b722e5-09c8-ba57-5cd1-dd350b1a1bcb",
+                        "type": "String Format",
+                        "x": -30.083382154294327,
+                        "y": 595.1713916509627,
+                        "parameters": {
+                            "format": "<script>\n// Define the function\nfunction toggleNextLevel() {\n    // Get all the elements with class name that starts with 'level'\n    const elements = document.querySelectorAll('[class^=\"level\"]');\n\n    // Add click event listener to each element\n    elements.forEach(element => {\n        element.addEventListener('click', function() {\n            // Extract the level number from the class name\n            const level = Array.from(this.classList).find(cls => cls.startsWith('level'));\n            const levelNumber = parseInt(level.replace('level', ''));\n\n            // Find the parent accordion element\n            const accordionElement = this.closest('.accordion');\n\n            // If accordion element exists, find the next level elements within it\n            if (accordionElement) {\n                let nextElement = this.nextElementSibling;\n                while (nextElement && !nextElement.classList.contains(`level${levelNumber}`)) {\n                    const nextElementLevel = Array.from(nextElement.classList).find(cls => cls.startsWith('level'));\n                    const nextElementLevelNumber = parseInt(nextElementLevel.replace('level', ''));\n                    if (nextElementLevelNumber === levelNumber + 1) {\n                        const display = getComputedStyle(nextElement).display;\n                        nextElement.style.display = display === 'none' ? 'block' : 'none';\n                    } else if (nextElementLevelNumber > levelNumber + 1) {\n                        nextElement.style.display = 'none';\n                    }\n                    nextElement = nextElement.nextElementSibling;\n                }\n            }\n        });\n    });\n}\n\n// Call the function\ntoggleNextLevel();\n\nfunction toggleLevel2() {\n    // Get all the elements with class name 'level2'\n    const level2Elements = document.querySelectorAll('.level2');\n\n    // Toggle the display of each level2 element\n    level2Elements.forEach(element => {\n        const display = getComputedStyle(element).display;\n        element.style.display = display === 'none' ? 'block' : 'none';\n    });\n}\n\nfunction toggleLevel3() {\n    // Get all the elements with class name 'level2'\n    const level3Elements = document.querySelectorAll('.level3');\n\n    // Toggle the display of each level2 element\n    level3Elements.forEach(element => {\n        const display = getComputedStyle(element).display;\n        element.style.display = display === 'none' ? 'block' : 'none';\n    });\n}\n\nfunction toggleLevel4() {\n    // Get all the elements with class name 'level2'\n    const level4Elements = document.querySelectorAll('.level4');\n\n    // Toggle the display of each level2 element\n    level4Elements.forEach(element => {\n        const display = getComputedStyle(element).display;\n        element.style.display = display === 'none' ? 'block' : 'none';\n    });\n}\n\n// Add click event listener to all elements with class 'view-l2'\nconst l2Elements = document.querySelectorAll('.view-l2');\nl2Elements.forEach(element => {\n    element.addEventListener('click', toggleLevel2);\n});\n\nconst l3Elements = document.querySelectorAll('.view-l3');\nl3Elements.forEach(element => {\n    element.addEventListener('click', toggleLevel3);\n});\n\nconst l4Elements = document.querySelectorAll('.view-l4');\nl4Elements.forEach(element => {\n    element.addEventListener('click', toggleLevel4);\n});\n</script>"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "levelNumber",
+                                "type": "string",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "b0f6e786-5ec9-5732-6d04-e8a8eca540b3",
+                        "type": "String Format",
+                        "x": 905.2663504616662,
+                        "y": 390.33139297416915,
+                        "parameters": {
+                            "format": "// Get the input string\nconst inputString = Inputs.InputString || '';\n\n// Define a function to convert the string into nested accordions\nfunction convertToAccordion(input) {\n    // Initialize an empty string to store the result\n    let result = '';\n\n    // Use a regular expression to match the tags and their content\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\n\n    // Initialize a variable to keep track of the current level\n    let currentLevel = 0;\n\n    // Iterate over the matches\n    let match;\n    while ((match = regex.exec(input)) !== null) {\n        // Get the level and the content from the match\n        let level = parseInt(match[1]);\n        let content = match[2];\n\n        // If the level is 1, start a new accordion\n        if (level === 1) {\n            if (result !== '') {\n                // Close the previous accordion\n                result += '</div>';\n            }\n            // Separate the accordion class from the level1 class\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\n        }\n\n        // If the level is greater than 1, create a nested accordion inside the previous level\n        if (level > 1) {\n            result += `<div class=\"level${level}\">${content}</div>`;\n        }\n\n        // If the level is less than or equal to the current level, close the accordion\n        if (level <= currentLevel) {\n            result += '';\n        }\n\n        // Update the current level\n        currentLevel = level;\n    }\n\n    // Close the last accordion if it's not closed\n    if (result !== '') {\n        result += '</div>';\n    }\n\n    // Return the result\n    return result;\n}\n\n// Convert the input string into nested accordions\nlet accordionString = convertToAccordion(inputString);\n\n// Output the result\nOutputs.AccordionString = accordionString;\n\n// Signal success\nOutputs.Success();\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "content",
+                                "type": "string",
+                                "plug": "input",
+                                "index": 2
+                            },
+                            {
+                                "name": "level",
+                                "type": "string",
+                                "plug": "input",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "1e4daae1-1ef2-01d8-c945-fae9d8b4bbcc",
+                        "type": "JavaScriptFunction",
+                        "label": "AI Function",
+                        "x": -305,
+                        "y": 236,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [],
+                        "metadata": {
+                            "prompt": {
+                                "history": [
+                                    {
+                                        "content": "read the text from a txt file anche convert it to a string",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            }
+                                        },
+                                        "snowflakeId": "018b7ff02670-zqayb8",
+                                        "type": "user"
+                                    }
+                                ],
+                                "metadata": {
+                                    "templateId": "function"
+                                }
+                            },
+                            "AiAssistant": "old"
+                        }
+                    },
+                    {
+                        "id": "d02460a4-7977-f8d5-9327-03933cc775ad",
+                        "type": "Open File Picker",
+                        "x": 221.11897712379204,
+                        "y": 78.57981304552399,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "d6cbeefb-3068-a0d2-b8de-c56382a48ddc",
+                        "type": "JavaScriptFunction",
+                        "label": "Text File to String",
+                        "x": 444.2054900393939,
+                        "y": -71.58972250932428,
+                        "parameters": {
+                            "functionScript": "// Get the file from the inputs\nconst file = Inputs.File;\n\n// Check if the file is not null\nif (!file) throw new Error('No file provided');\n\n// Create a new FileReader instance\nconst reader = new FileReader();\n\n// Read the file as text\nreader.readAsText(file);\n\n// When the file is loaded\nreader.onload = function() {\n  // Output the file content as a string\n  Outputs.Text = reader.result;\n  Outputs.Success();\n};\n\n// If there is an error while reading the file\nreader.onerror = function() {\n  Outputs.error = reader.error;\n  Outputs.Failure();\n};\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "in-File",
+                                "displayName": "File",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "out-Failure",
+                                "displayName": "Failure",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "out-Text",
+                                "displayName": "Text",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "out-error",
+                                "displayName": "error",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 8
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "prompt": {
+                                "history": [
+                                    {
+                                        "content": "read a text from a txt file uploaded from the user and convert it to a string",
+                                        "metadata": {
+                                            "user": {
+                                                "id": "125c9f95-7d62-46f6-8191-b596629340c4",
+                                                "email": "mat.palu@gmail.com",
+                                                "name": "Matteo Palù"
+                                            },
+                                            "code": "// Get the file from the inputs\nconst file = Inputs.File;\n\n// Check if the file is not null\nif (!file) throw new Error('No file provided');\n\n// Create a new FileReader instance\nconst reader = new FileReader();\n\n// Read the file as text\nreader.readAsText(file);\n\n// When the file is loaded\nreader.onload = function() {\n  // Output the file content as a string\n  Outputs.Text = reader.result;\n  Outputs.Success();\n};\n\n// If there is an error while reading the file\nreader.onerror = function() {\n  Outputs.error = reader.error;\n  Outputs.Failure();\n};\n"
+                                        },
+                                        "snowflakeId": "018b7ff42151-5o2lyg",
+                                        "type": "user"
+                                    },
+                                    {
+                                        "type": "assistant",
+                                        "content": "\nThis function reads a text file uploaded by the user and converts it to a string. It takes a file from the <span style=\"color: var(--base-color-yellow-400);\">Inputs.File</span> input, checks if the file is not null, and then uses the FileReader API to read the content of the file as text. \n\nWhen the file is successfully loaded, the content of the file is outputted as a string through the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Text</span> output and the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Success</span> signal is triggered.\n\nIf there is an error while reading the file, the error is outputted through the <span style=\"color: var(--base-color-yellow-400);\">Outputs.error</span> output and the <span style=\"color: var(--base-color-yellow-400);\">Outputs.Failure</span> signal is triggered.\n",
+                                        "snowflakeId": "018b7ff46299-ybuzu7",
+                                        "metadata": {}
+                                    }
+                                ],
+                                "metadata": {
+                                    "templateId": "function"
+                                }
+                            },
+                            "AiAssistant": "old",
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "5e1b9ad5-5e65-85f7-e8f0-ea712964ba75",
+                        "type": "String",
+                        "x": 678.3836065137083,
+                        "y": 61.10298013213236,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "c9cc98a1-00c5-97f8-1d04-8cf8cf6672af",
+                        "type": "States",
+                        "x": 291.76035848498134,
+                        "y": 591.3176958691544,
+                        "parameters": {
+                            "states": "mounted,unmounted",
+                            "currentState": "unmounted",
+                            "values": "mount",
+                            "type-mount": "boolean",
+                            "value-mounted-mount": true
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "type": {
+                                    "name": "boolean",
+                                    "allowConnectionsOnly": true
+                                },
+                                "plug": "output",
+                                "group": "Values",
+                                "name": "mount",
+                                "index": 6
+                            },
+                            {
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        {
+                                            "label": "Number",
+                                            "value": "number"
+                                        },
+                                        {
+                                            "label": "String",
+                                            "value": "string"
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean"
+                                        },
+                                        {
+                                            "label": "Color",
+                                            "value": "color"
+                                        },
+                                        {
+                                            "label": "Text Style",
+                                            "value": "textStyle"
+                                        }
+                                    ],
+                                    "allowEditOnly": true
+                                },
+                                "default": "number",
+                                "plug": "input",
+                                "group": "Types",
+                                "displayName": "mount",
+                                "name": "type-mount",
+                                "index": 7
+                            },
+                            {
+                                "plug": "input",
+                                "type": "boolean",
+                                "group": "mounted Values",
+                                "name": "value-mounted-mount",
+                                "displayName": "mount",
+                                "editorName": "mounted|mount",
+                                "index": 8
+                            },
+                            {
+                                "plug": "input",
+                                "type": "curve",
+                                "displayName": "Default",
+                                "default": {
+                                    "curve": [
+                                        0,
+                                        0,
+                                        0.58,
+                                        1
+                                    ],
+                                    "dur": 300,
+                                    "delay": 0
+                                },
+                                "group": "mounted Transitions",
+                                "name": "transitiondef-mounted",
+                                "index": 9
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "signal",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To mounted",
+                                "name": "to-mounted",
+                                "group": "Go to state",
+                                "index": 10
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At mounted",
+                                "name": "at-mounted",
+                                "group": "Current state",
+                                "index": 11
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached mounted",
+                                "name": "reached-mounted",
+                                "group": "Current state",
+                                "index": 12
+                            },
+                            {
+                                "plug": "input",
+                                "type": "boolean",
+                                "group": "unmounted Values",
+                                "name": "value-unmounted-mount",
+                                "displayName": "mount",
+                                "editorName": "unmounted|mount",
+                                "index": 13
+                            },
+                            {
+                                "plug": "input",
+                                "type": "curve",
+                                "displayName": "Default",
+                                "default": {
+                                    "curve": [
+                                        0,
+                                        0,
+                                        0.58,
+                                        1
+                                    ],
+                                    "dur": 300,
+                                    "delay": 0
+                                },
+                                "group": "unmounted Transitions",
+                                "name": "transitiondef-unmounted",
+                                "index": 14
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "signal",
+                                    "allowConnectionsOnly": true
+                                },
+                                "displayName": "To unmounted",
+                                "name": "to-unmounted",
+                                "group": "Go to state",
+                                "index": 15
+                            },
+                            {
+                                "plug": "output",
+                                "type": "boolean",
+                                "displayName": "At unmounted",
+                                "name": "at-unmounted",
+                                "group": "Current state",
+                                "index": 16
+                            },
+                            {
+                                "plug": "output",
+                                "type": "signal",
+                                "displayName": "Has Reached unmounted",
+                                "name": "reached-unmounted",
+                                "group": "Current state",
+                                "index": 17
+                            },
+                            {
+                                "plug": "input",
+                                "type": {
+                                    "name": "enum",
+                                    "enums": [
+                                        "mounted",
+                                        "unmounted"
+                                    ]
+                                },
+                                "group": "States",
+                                "displayName": "State",
+                                "name": "currentState",
+                                "default": "mounted",
+                                "index": 18
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "e764ce0b-79a2-8a35-9ee5-3c77f2da1b01",
+                        "type": "Timer",
+                        "x": 540.8411008617855,
+                        "y": 634.4968944035669,
+                        "parameters": {
+                            "duration": 1000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "13aebcc5-f5d2-ab6b-748e-269250e0cd5a",
+                        "type": "JavaScriptFunction",
+                        "x": 722.0890596755528,
+                        "y": 472.2869325231133,
+                        "parameters": {
+                            "functionScript": "// Get the input string\r\nconst inputString = Inputs.InputString || '';\r\n\r\n// Define a function to convert the string into nested accordions\r\nfunction convertToAccordion(input) {\r\n    // Initialize an empty string to store the result\r\n    let result = '';\r\n\r\n    // Use a regular expression to match the tags and their content\r\n    let regex = /<level(\\d+)>(.*?)<\\/level\\1>/g;\r\n\r\n    // Initialize a variable to keep track of the current level\r\n    let currentLevel = 0;\r\n\r\n    // Initialize a variable to keep track of the next level\r\n    let nextLevel = 0;\r\n\r\n    // Iterate over the matches\r\n    let match;\r\n    while ((match = regex.exec(input)) !== null) {\r\n        // Get the level and the content from the match\r\n        let level = parseInt(match[1]);\r\n        let content = match[2];\r\n\r\n        // Get the next level\r\n        let nextMatch = regex.exec(input);\r\n        if (nextMatch !== null) {\r\n            nextLevel = parseInt(nextMatch[1]);\r\n        }\r\n\r\n        // If the level is 1, start a new accordion\r\n        if (level === 1) {\r\n            if (result !== '') {\r\n                // Close the previous accordion\r\n                result += '</div>';\r\n            }\r\n            // Separate the accordion class from the level1 class\r\n            result += `<div class=\"accordion\"><div class=\"level1\">${content}</div>`;\r\n        }\r\n\r\n        // If the level is greater than 1, create a nested accordion inside the previous level\r\n        if (level > 1) {\r\n            // Add a \"click\" class to the level1 div if it's the parent of this level\r\n            if (currentLevel === 1) {\r\n                result = result.replace(/<div class=\"level1\">/, '<div class=\"level1 click\">');\r\n            }\r\n            // Add a \"click\" class to all levels but the last one of a series\r\n            if (level < nextLevel) {\r\n                result += `<div class=\"level${level} click\">${content}</div>`;\r\n            } else {\r\n                result += `<div class=\"level${level}\">${content}</div>`;\r\n            }\r\n        }\r\n\r\n        // If the level is less than or equal to the current level, close the accordion\r\n        if (level <= currentLevel) {\r\n            result += '';\r\n        }\r\n\r\n        // Update the current level\r\n        currentLevel = level;\r\n    }\r\n\r\n    // Close the last accordion if it's not closed\r\n    if (result !== '') {\r\n        result += '</div>';\r\n    }\r\n\r\n    // Return the result\r\n    return result;\r\n}\r\n\r\n// Convert the input string into nested accordions\r\nlet accordionString = convertToAccordion(inputString);\r\n\r\n// Output the result\r\nOutputs.AccordionString = accordionString;\r\n\r\n// Signal success\r\nOutputs.Success();\r\n"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "in-InputString",
+                                "displayName": "InputString",
+                                "plug": "input",
+                                "type": "*",
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "out-Success",
+                                "displayName": "Success",
+                                "plug": "output",
+                                "type": "signal",
+                                "group": "Outputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "out-AccordionString",
+                                "displayName": "AccordionString",
+                                "plug": "output",
+                                "type": "*",
+                                "group": "Outputs",
+                                "index": 6
+                            }
+                        ],
+                        "children": [],
+                        "metadata": {
+                            "merge": {
+                                "soureCodePorts": [
+                                    "functionScript"
+                                ]
+                            }
+                        }
                     }
+                ],
+                "visualRoots": [
+                    "a4b7e4d4-c01d-1267-30b6-c2b448b90067"
                 ]
             }
         }
     ],
     "settings": {
         "bodyScroll": true,
-        "navigationPathType": "path"
+        "navigationPathType": "path",
+        "headCode": "<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>"
     },
     "rootNodeId": "246f9453-a119-ac78-171e-3806cf596ecc",
     "version": "4",
     "metadata": {
-        "dbCollections": [],
         "styles": {
             "text": {
                 "Display": {
